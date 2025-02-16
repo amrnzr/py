@@ -21,3 +21,9 @@ class Person:
     print(type(person))
     print(person.name)
     print(person.age)
+
+#it
+a = [1, 2, 3]
+aiter = iter(a)
+print(next(aiter)) #1
+print(next(aiter)) #2

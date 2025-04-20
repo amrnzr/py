@@ -1,6 +1,6 @@
 import psycopg2
 import csv
-
+ 
 conn = psycopg2.connect(
     host="localhost",
     database="phonebook",
@@ -50,7 +50,7 @@ def delete(name=None, phone=None):
     if name:
         cur.execute("DELETE FROM phonebook WHERE name = %s", (name,))
     if phone:
-        cur.execute("DELETE FROM phonebook WHERE phone = %s", (phone,))
+        cur.execute("DELETE FROM phonebook WHERE phone =%s", (phone,))
     conn.commit()
 
 if __name__ == "__main__":
